@@ -1,5 +1,5 @@
-import HomePage from '../pageObjectRepository/HomePage'
-import LoginPage from '../pageObjectRepository/LoginPage'
+import HomePage from '../../pageObjectRepository/HomePage' //farkli pakete alinca basina ../ kendi extra koydu
+import LoginPage from '../../pageObjectRepository/LoginPage'
 
 
 
