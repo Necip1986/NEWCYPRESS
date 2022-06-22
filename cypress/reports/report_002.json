@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-22T00:39:21.227Z",
+    "end": "2022-06-22T00:39:28.444Z",
+    "duration": 7217,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9b6efbd1-9cb2-4415-beb8-336fa99b6ad4",
+      "title": "",
+      "fullFile": "cypress/integration/deneme/day06/frames.cy.js",
+      "file": "cypress/integration/deneme/day06/frames.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "137685f5-4a72-41fc-8b06-bb9dfaa78fca",
+          "title": "frames",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "handling iframes",
+              "fullTitle": "frames handling iframes",
+              "timedOut": null,
+              "duration": 4442,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/*\n   iframes\n   1-we need to install plugin. write in google and find below code \n     ctrl c terminali kapatir\n     npm install -D cypress-iframe\n   import package in the class: \n                              import 'cypress-iframe'; copy and paste at the top of the claas\n    3-we have to use cy.frameLoaded(#mce_0_ifr) css selector of iframe\n    4-cy.iframe().find('p').type() // \n                              \n    */\ncy.visit('https://the-internet.herokuapp.com/iframe'); //asserting the text\ncy.get('h3').should('contain', 'Editor'); //cy.get('#mce_0_ifr').type('inside the frame'); //we can not type because it is a frame we have to handle\ncy.frameLoaded('#mce_0_ifr'); //switching the iframe element\ncy.iframe().find('p').clear(); //first we clean the area\ncy.iframe().find('p').type('inside the iframe'); //we need to use iframe method\n//working outside of the frame by default we don't need to switch again. we can work easily\ncy.get('.large-4 > div > a').should('have.text', 'Elemental Selenium');",
+              "err": {},
+              "uuid": "bd84f8c2-7aeb-4656-a1d3-a99e502d462b",
+              "parentUUID": "137685f5-4a72-41fc-8b06-bb9dfaa78fca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bd84f8c2-7aeb-4656-a1d3-a99e502d462b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4442,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

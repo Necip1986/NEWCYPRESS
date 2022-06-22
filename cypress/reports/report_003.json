@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-22T00:39:31.090Z",
+    "end": "2022-06-22T00:39:37.637Z",
+    "duration": 6547,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d50dcf02-5c30-4dc2-a3e1-71e7ac65c954",
+      "title": "",
+      "fullFile": "cypress/integration/deneme/day06/multipleWindows.cy.js",
+      "file": "cypress/integration/deneme/day06/multipleWindows.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2eb65f1e-a154-4161-b7e2-cf336b265bf7",
+          "title": "multiple windows",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "OPENING IN NEW URL",
+              "fullTitle": "multiple windows OPENING IN NEW URL",
+              "timedOut": null,
+              "duration": 4417,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//WAY 2\ncy.visit('https://the-internet.herokuapp.com/windows'); //We will get the href value and store in a variable then open the value in the same window\n//we will use prop() to get the value of attribute. it is a jquery method\n//since prop is a jquery we use then() to use prop function\ncy.wait(3000);\ncy.get('.example > a').then(element => {\n  const newUrl = element.prop('href');\n  cy.visit(newUrl);\n}); //asserting the new window\ncy.get('h3').should('have.text', 'New Window');",
+              "err": {},
+              "uuid": "6df25bab-c8b7-4dd6-85e5-a947dd62b519",
+              "parentUUID": "2eb65f1e-a154-4161-b7e2-cf336b265bf7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6df25bab-c8b7-4dd6-85e5-a947dd62b519"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4417,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
