@@ -3,7 +3,7 @@ import LoginPage from '../../pageObjectRepository/LoginPage'
 
 
 
-describe("Fixture Folder",()=>{
+describe("Fixtur Folder",()=>{
 
     before(function(){
         //this used to access the data that is inside credentials.json file

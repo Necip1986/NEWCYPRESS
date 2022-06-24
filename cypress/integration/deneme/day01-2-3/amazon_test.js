@@ -3,9 +3,11 @@ describe('Amazon Test',()=>{
         cy.visit('https://www.amazon.com');
         cy.get('#twotabsearchtextbox').type('apple').should('value','apple')
         cy.should('value','apple')
+        
       
         
     })
 })
 
 
+cyp
